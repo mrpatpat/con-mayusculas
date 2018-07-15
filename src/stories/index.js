@@ -6,6 +6,7 @@ import { linkTo } from '@storybook/addon-links';
 
 import { Button, Welcome } from '@storybook/react/demo';
 import AddPlayers from "../add-players/AddPlayers";
+import PlayerNames from "../add-players/PlayerNames";
 
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 
@@ -20,4 +21,7 @@ storiesOf('Button', module)
   ));
 
 storiesOf('AddPlayers', module)
-    .add('base', () => <AddPlayers/>);
+    .add('full form with no players', () => <AddPlayers/>)
+    .add('full form with some players', () => <AddPlayers players={["Kenneth", "Yung A", "Staiger"]}/>)
+    .add('three player names', () => <PlayerNames players={["Kenneth", "Yung A", "Staiger"]}/>)
+    .add('zero player names', () => <PlayerNames players={[]}/>);
