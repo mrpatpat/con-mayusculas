@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import PlayerNames from "./PlayerNames";
+import Card from "../cards/Card";
+import "./Game.css";
 
 class AddPlayers extends Component {
 
@@ -32,7 +34,8 @@ class AddPlayers extends Component {
 
     render() {
         return (
-            <div className="add-players">
+            <div className="game">
+                <Card players={this.state.players}/>
                 <form onSubmit={this.addPlayer}>
                     <input placeholder="Spieler eintragen" ref={(a) => this._inputElement = a} ></input>
                     <button type="submit">Speichern</button>

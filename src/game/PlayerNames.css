@@ -1,0 +1,9 @@
+.player-names {
+    list-style-type: none;
+    margin: 10px;
+    padding: 0;
+}
+
+.player-names > li{
+    margin: 5px;
+}

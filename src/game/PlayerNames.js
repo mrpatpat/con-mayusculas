@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./PlayerNames.css";
 
 class PlayerNames extends Component {
 
