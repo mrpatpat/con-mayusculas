@@ -1,9 +1,27 @@
-.app {
+body {
     background-color: #feb236;
+    font-size: 1.5em;
+}
+
+input, button {
+    border: 1px solid #d64161;
+    margin:0 auto;
+}
+
+button {
+    background-color: #d64161;
+}
+
+input {
+    background-color: #d6b9ac;
+}
+
+.app {
     padding: 20px;
     text-align: center;
 }
 
-.app > form {
+.app > input {
     margin-bottom:20px;
 }
+

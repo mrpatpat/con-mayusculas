@@ -18,7 +18,7 @@ class PlayerNames extends Component {
                 </ul>
             );
         } else {
-            return (<span>Keine Spieler</span>);
+            return (<span className="player-names">Keine Spieler</span>);
         }
 
     }
