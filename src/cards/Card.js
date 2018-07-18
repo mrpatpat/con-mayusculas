@@ -7,11 +7,9 @@ class Card extends Component {
     constructor(props) {
         super(props);
 
-        this.generator = new CardGenerator();
-
         this.state = {
             players: this.props.players || [],
-            content: this.generator.generateContent(this.props.players || [])
+            content: CardGenerator.generateContent(this.props.players || [])
         };
 
         this.nextCard = this.nextCard.bind(this);
@@ -22,7 +20,7 @@ class Card extends Component {
         this.setState(() => {
             return {
                 players: this.props.players || [],
-                content: this.generator.generateContent(this.props.players || [])
+                content: CardGenerator.generateContent(this.props.players || [])
             };
         });
     }
