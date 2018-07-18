@@ -71,5 +71,12 @@ describe("Card", ()=>{
         expect(card().state().players).toEqual(data);
     });
 
+    it("should call 'CardGenerator#generate' with the correct arguments when clicked", () => {
+        const data = ["Samuel", "Anna", "Tom"];
+        props.players = data;
+        card().simulate("click");
+        expect(CardGenerator.generateContent).toHaveBeenCalledWith(data);
+    });
+
 });
 
